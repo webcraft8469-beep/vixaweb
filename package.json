@@ -1,0 +1,37 @@
+{
+  "name": "vixa-web-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@splinetool/react-spline": "^4.1.0",
+    "framer-motion": "12.42.2",
+    "lucide-react": "1.26.0",
+    "next": "^16.2.12",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/node": "^24.10.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.2.12",
+    "postcss": "8.5.23",
+    "tailwindcss": "4.3.3",
+    "typescript": "^5.9.3"
+  },
+  "overrides": {
+    "postcss": "$postcss",
+    "sharp": "0.35.3"
+  },
+  "engines": {
+    "node": "24.x"
+  }
+}
