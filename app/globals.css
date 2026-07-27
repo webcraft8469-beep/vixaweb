@@ -156,7 +156,6 @@ button {
 }
 
 .brand-logo-pulse {
-  mix-blend-mode: screen;
   transform-origin: center;
   animation: brand-logo-glow 2s ease-in-out infinite;
   will-change: filter, opacity, transform;
@@ -211,4 +210,5 @@ button {
     font-size: 16px !important;
   }
 }
+
 
