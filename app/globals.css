@@ -172,6 +172,11 @@ button {
 }
 
 @media (max-width: 640px) {
+  .glass {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
   html {
     scroll-padding-top: 76px;
   }

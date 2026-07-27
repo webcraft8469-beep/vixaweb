@@ -7,7 +7,7 @@ import { Container } from "@/components/ui/container";
 import { RobotScene } from "@/components/landing/robot-scene";
 
 const words = ["продают", "убеждают", "впечатляют", "работают"];
-const particles = Array.from({ length: 24 }, (_, index) => ({
+const particles = Array.from({ length: 10 }, (_, index) => ({
   left: `${(index * 37) % 97}%`,
   top: `${(index * 53) % 91}%`,
   delay: (index % 8) * 0.38,
