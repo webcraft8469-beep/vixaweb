@@ -4,7 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { ArrowDown, CheckCircle2 } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button-link";
 import { Container } from "@/components/ui/container";
-import { RobotScene } from "@/components/landing/robot-scene";
+import { StudioVisual } from "@/components/landing/studio-visual";
 
 const words = ["продают", "убеждают", "впечатляют", "работают"];
 const particles = Array.from({ length: 10 }, (_, index) => ({
@@ -107,7 +107,7 @@ export function Hero() {
           </motion.div>
           </div>
 
-          <RobotScene />
+          <StudioVisual />
         </div>
 
         <motion.a
