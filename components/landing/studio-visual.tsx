@@ -23,15 +23,15 @@ export function StudioVisual() {
           <span className="absolute bottom-[8%] left-[18%] h-px w-10 rotate-45 bg-gradient-to-r from-violet/70 to-transparent" />
         </div>
 
-        <div className="absolute inset-[5.25rem] rounded-full bg-[radial-gradient(circle_at_35%_25%,rgba(255,255,255,.08),rgba(8,12,23,.88)_45%,rgba(3,6,13,.98)_75%)] shadow-[0_0_90px_rgba(58,131,246,.22),inset_0_0_50px_rgba(255,255,255,.035)]">
-          <div className="absolute inset-7">
+        <div className="absolute inset-[4.5rem]">
+          <div className="absolute inset-3">
             <Image
               src="/vixa-web-mark.png"
               alt="Логотип VIXA WEB"
               fill
               priority
               sizes="320px"
-              className="object-contain drop-shadow-[0_20px_35px_rgba(47,109,255,.3)]"
+              className="brand-logo-pulse object-contain"
             />
           </div>
         </div>
@@ -49,3 +49,4 @@ export function StudioVisual() {
     </div>
   );
 }
+

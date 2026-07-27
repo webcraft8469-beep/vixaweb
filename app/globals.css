@@ -1,4 +1,4 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 @theme inline {
   --font-sans: Arial, "Helvetica Neue", sans-serif;
   --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
@@ -155,6 +155,30 @@ button {
   opacity: 0.62;
 }
 
+.brand-logo-pulse {
+  mix-blend-mode: screen;
+  transform-origin: center;
+  animation: brand-logo-glow 2s ease-in-out infinite;
+  will-change: filter, opacity, transform;
+}
+
+@keyframes brand-logo-glow {
+  0%,
+  68%,
+  100% {
+    opacity: 0.9;
+    filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.2));
+    transform: scale(1);
+  }
+
+  82% {
+    opacity: 1;
+    filter:
+      drop-shadow(0 0 24px rgba(56, 189, 248, 0.82))
+      drop-shadow(0 0 48px rgba(124, 58, 237, 0.58));
+    transform: scale(1.035);
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -187,3 +211,4 @@ button {
     font-size: 16px !important;
   }
 }
+
