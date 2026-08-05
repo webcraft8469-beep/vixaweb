@@ -26,7 +26,7 @@ function normalizeWhatsAppUrl(value = "") {
 
 export const siteConfig = {
   name: "VIXA WEB",
-  title: "AI web studio — премиальные сайты для бизнеса",
+  title: "Crafting modern websites — премиальные сайты для бизнеса",
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   description:
     "Разрабатываю премиальные сайты, которые усиливают доверие к бизнесу и превращают посетителей в клиентов.",

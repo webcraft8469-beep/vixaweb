@@ -32,8 +32,8 @@ export function Header() {
               <span className="block text-[15px] font-bold tracking-[0.03em] text-white">
                 VIXA <span className="text-cyan">WEB</span>
               </span>
-              <span className="mt-1 hidden text-[7px] font-medium uppercase tracking-[0.28em] text-slate-500 min-[380px]:block">
-                AI web studio
+              <span className="mt-1 hidden text-[6px] font-medium uppercase tracking-[0.15em] text-slate-500 min-[380px]:block">
+                Crafting modern websites
               </span>
             </span>
           </Link>

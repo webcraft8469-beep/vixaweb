@@ -14,7 +14,7 @@ export function Footer() {
           </span>
           <span>
             <span className="block text-sm font-bold tracking-[0.04em] text-white">{siteConfig.name}</span>
-            <span className="mt-1 block text-[7px] uppercase tracking-[0.28em] text-slate-600">AI web studio</span>
+            <span className="mt-1 block text-[7px] uppercase tracking-[0.15em] text-slate-600">Crafting modern websites</span>
           </span>
         </Link>
         <p className="text-xs text-slate-600">Премиальные сайты для бизнеса · 2026</p>

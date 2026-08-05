@@ -39,12 +39,15 @@ export function StudioVisual() {
 
       <div className="absolute left-[5%] top-[21%] flex items-center gap-3 text-[10px] font-medium uppercase tracking-[0.24em] text-slate-500">
         <span className="h-px w-10 bg-gradient-to-r from-transparent to-cyan/60" />
-        Digital studio
+        VIXA WEB
       </div>
 
-      <div className="absolute bottom-[15%] right-[3%] text-right">
-        <p className="text-[11px] font-medium uppercase tracking-[0.3em] text-white/75">Design · Code · Growth</p>
-        <p className="mt-2 text-[9px] uppercase tracking-[0.22em] text-slate-600">VIXA WEB / 2026</p>
+      <div className="absolute bottom-[15%] right-[3%] flex items-center gap-3">
+        <span className="h-px w-10 bg-gradient-to-r from-transparent to-cyan/70" />
+        <p className="text-[10px] font-medium uppercase tracking-[0.28em] text-white/75">
+          Crafting modern websites
+        </p>
+        <span className="h-px w-10 bg-gradient-to-r from-violet/70 to-transparent" />
       </div>
     </div>
   );

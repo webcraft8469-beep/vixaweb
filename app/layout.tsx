@@ -33,13 +33,13 @@ export const metadata: Metadata = {
     title: `${siteConfig.name} — ${siteConfig.title}`,
     description: siteConfig.description,
     siteName: siteConfig.name,
-    images: [{ url: "/vixa-web-logo.jpg", width: 1280, height: 853, alt: "VIXA WEB — AI WEB STUDIO" }],
+    images: [{ url: "/vixa-web-logo.png", width: 1536, height: 1024, alt: "VIXA WEB — CRAFTING MODERN WEBSITES" }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.name} — ${siteConfig.title}`,
     description: siteConfig.description,
-    images: ["/vixa-web-logo.jpg"],
+    images: ["/vixa-web-logo.png"],
   },
   robots: { index: true, follow: true },
 };
