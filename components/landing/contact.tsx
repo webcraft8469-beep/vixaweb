@@ -2,7 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, ArrowUpRight, Check, Copy, Mail, MessageCircle, Send } from "lucide-react";
+import { ArrowRight, Check, MessageCircle, Send } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { Container } from "@/components/ui/container";
 
@@ -12,26 +12,7 @@ export function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
-  const [emailCopyStatus, setEmailCopyStatus] = useState<"idle" | "copied" | "error">("idle");
   const reduced = useReducedMotion();
-  const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(siteConfig.email)}`;
-
-  const copyEmail = async () => {
-    try {
-      await navigator.clipboard.writeText(siteConfig.email);
-      setEmailCopyStatus("copied");
-    } catch {
-      const input = document.createElement("textarea");
-      input.value = siteConfig.email;
-      input.style.position = "fixed";
-      input.style.opacity = "0";
-      document.body.appendChild(input);
-      input.select();
-      const copied = document.execCommand("copy");
-      input.remove();
-      setEmailCopyStatus(copied ? "copied" : "error");
-    }
-  };
 
   const submit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -113,33 +94,6 @@ export function Contact() {
                     <ArrowRight className="size-4 text-slate-600 transition group-hover:translate-x-1 group-hover:text-emerald-400" />
                   </a>
                 )}
-                <div className="group flex min-h-14 items-center rounded-2xl border border-white/[0.09] bg-white/[0.035] p-1.5 pl-4 text-sm text-slate-300 transition hover:border-violet/30 hover:bg-violet/[0.06]">
-                  <a
-                    href={gmailComposeUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex min-w-0 flex-1 self-stretch items-center gap-3"
-                    aria-label={`Написать на email ${siteConfig.email}`}
-                  >
-                    <Mail className="size-4 shrink-0 text-violet" />
-                    <span className="truncate">{siteConfig.email}</span>
-                    <span className="ml-auto flex shrink-0 items-center gap-1.5 text-xs text-slate-500 transition group-hover:text-violet">
-                      Написать <ArrowUpRight className="size-3.5" />
-                    </span>
-                  </a>
-                  <button
-                    type="button"
-                    onClick={copyEmail}
-                    aria-label={`Скопировать email ${siteConfig.email}`}
-                    title="Скопировать email"
-                    className="ml-3 grid size-11 shrink-0 place-items-center rounded-xl border border-white/[0.08] text-slate-500 transition hover:border-violet/35 hover:bg-violet/10 hover:text-violet"
-                  >
-                    {emailCopyStatus === "copied" ? <Check className="size-4 text-emerald-400" /> : <Copy className="size-4" />}
-                  </button>
-                  <span className="sr-only" aria-live="polite">
-                    {emailCopyStatus === "copied" ? "Email скопирован" : emailCopyStatus === "error" ? "Не удалось скопировать email" : ""}
-                  </span>
-                </div>
               </div>
             </div>
           </div>
@@ -170,8 +124,8 @@ export function Contact() {
                     <input name="name" required autoComplete="name" placeholder="Имя" className="min-h-12 rounded-xl border border-white/10 bg-black/25 px-4 text-sm text-white outline-none transition placeholder:text-slate-700 focus:border-cyan/45" />
                   </label>
                   <label className="grid gap-2 text-xs text-slate-500">
-                    Куда ответить?
-                    <input name="contact" required autoComplete="email" placeholder="Email или телефон" className="min-h-12 rounded-xl border border-white/10 bg-black/25 px-4 text-sm text-white outline-none transition placeholder:text-slate-700 focus:border-cyan/45" />
+                    Телефон или Telegram
+                    <input name="contact" required autoComplete="tel" placeholder="Телефон или @username" className="min-h-12 rounded-xl border border-white/10 bg-black/25 px-4 text-sm text-white outline-none transition placeholder:text-slate-700 focus:border-cyan/45" />
                   </label>
                 </div>
                 <label className="grid gap-2 text-xs text-slate-500">

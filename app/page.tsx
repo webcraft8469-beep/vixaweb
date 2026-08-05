@@ -20,8 +20,8 @@ export default function HomePage() {
     serviceType: ["Веб-дизайн", "Разработка сайтов", "Landing page", "Корпоративные сайты"],
     contactPoint: {
       "@type": "ContactPoint",
-      email: siteConfig.email,
       contactType: "sales",
+      url: siteConfig.telegram || siteConfig.whatsapp || siteConfig.url,
     },
   };
 

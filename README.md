@@ -27,7 +27,6 @@ npm run start
 
 ```env
 NEXT_PUBLIC_SITE_URL=https://your-domain.com
-NEXT_PUBLIC_CONTACT_EMAIL=hello@example.com
 NEXT_PUBLIC_TELEGRAM_URL=https://t.me/your_username
 NEXT_PUBLIC_WHATSAPP_URL=https://wa.me/70000000000
 TELEGRAM_BOT_TOKEN=your_bot_token

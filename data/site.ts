@@ -30,7 +30,6 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   description:
     "Разрабатываю премиальные сайты, которые усиливают доверие к бизнесу и превращают посетителей в клиентов.",
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "webcraft8469@gmail.com",
   telegram: normalizeTelegramUrl(process.env.NEXT_PUBLIC_TELEGRAM_URL),
   whatsapp: normalizeWhatsAppUrl(process.env.NEXT_PUBLIC_WHATSAPP_URL),
 };
